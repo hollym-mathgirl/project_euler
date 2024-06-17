@@ -1,16 +1,13 @@
-def fibonacci(n):
-    a, b = 1, 1
-    for _ in range(n - 1):
-        a, b = b, a + b
-    return a
+x = 1000  # The number of digits we are looking for
 
-x = 1000
-counter = 1
-output = fibonacci(counter)
+# Initializing the first two Fibonacci numbers
+a, b = 1, 1
+counter = 2  # We start from the 3rd Fibonacci number
 
-while len(str(output)) < x:
+while len(str(b)) < x:
+    a, b = b, a + b
     counter += 1
-    output = fibonacci(counter)
 
-print(f"The output number with at least {x} digits is: {output}")
+print(f"The output number with at least {x} digits is: {b}")
 print(f"The position in the Fibonacci sequence is: {counter}")
+
