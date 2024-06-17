@@ -1,8 +1,8 @@
-x = 1000  # The number of digits we are looking for
+x = 1000  #desired number of digits
 
-# Initializing the first two Fibonacci numbers
+#initializing first two Fibonacci numbers
 a, b = 1, 1
-counter = 2  # We start from the 3rd Fibonacci number
+counter = 2  #starting from the 3rd Fibonacci number
 
 while len(str(b)) < x:
     a, b = b, a + b
